@@ -1,0 +1,86 @@
+body{
+    font-family:cursive;
+    background-image: url("img/fundo2.jpg");
+}
+.item{
+    list-style-type: none;
+    display: flex;
+    margin-left: 1%;
+    height: 25%;
+}
+
+.info1{
+    background-color: #BADAF9;
+    width: 50%;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    margin-left: 400px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 20px rgb(103, 118, 155);
+}
+
+.tarefas{
+    background-color: #BADAF9;
+    width: 50%;
+    height: 550px;
+    text-align: center;
+    margin-left: 400px;
+    border-radius: 10px;
+    box-shadow: 10px 20px rgb(103, 118, 155);
+    margin-top: 50px;
+}
+
+.tamanhoescrever{
+    width: 500px;
+    height: 30px;
+    background-color: #A3A6BF;
+    color: white;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.tamanhoescrever2{
+    width: 150px;
+    height: 35px;
+    background-color: #A3A6BF;
+    border-radius: 5px;
+}
+
+.teste{
+    width: 600px;
+    display: flex;
+}
+.testeRiscado{
+    width: 600px;
+    display: flex;
+    text-decoration: line-through;
+}
+
+.btnteste{
+    width: 25px;
+}
+
+.textodia{
+    margin-top: 4%;
+    margin-left: 27%;
+    background-color: #BADAF9;
+    border-radius: 5px;
+    box-shadow: 10px 20px rgb(103, 118, 155);
+}
+
+.box{
+    text-align: center;
+    width: 30px;
+    display: flex;
+    align-items: baseline;
+    margin-right: 40%;
+}
+
+.box li{
+    text-align: center;
+    background-color: #A3A6BF;
+    padding: 10px;
+    
+}

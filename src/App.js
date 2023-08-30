@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 function App() {
 
   const[ listaTarefas, setListaTarefas] = useState([]);
@@ -33,19 +34,29 @@ function App() {
   return (
     <>
       <header>
-          <h1>React Do</h1>
+          <h2 className="info1">Compromissos do dia:</h2>
       </header>
-      <div>
-          <input type="text" name="tarefa" placeholder="Digite sua tarefa" value={tarefa.texto} onChange={(e) => setTarefa({id: Math.random(), texto: e.target.value, status:false})}/>
-          <button onClick={addTarefa}>Adicionar</button>
+      
+      <div className="tarefas">
+      <div >
+          <input maxLength={60} className="tamanhoescrever" type="text" name="tarefa" placeholder="Digite seu compromisso..." value={tarefa.texto} onChange={(e) => setTarefa({id: Math.random(), texto: e.target.value, status:false})}/>
+          <button className="tamanhoescrever2" onClick={addTarefa}>Add</button>
       </div>
-      <div>
+      <div className="box">
           <ul>
             {listaTarefas.map((item, index) => (
-              <li key={item.id}>{item.texto} <button onClick={() => statusTarefa(item.id, item.status)}>{item.status ? 'Concluida': 'Não Concluida'}</button> <button onClick={() => excluirTarefa(item.id)}>Excluir</button> </li>
+              <li className="item" key={item.id}> <button className="btnteste" onClick={() => statusTarefa(item.id, item.status)}>{item.status ? '✔️': 'ㅤ'}</button> <div className={item.status ? "testeRiscado" : "teste" }>{item.texto}</div>  <button className="btnteste" onClick={() => excluirTarefa(item.id)}>✖️</button> </li>
             ))}
           </ul>
+          
       </div>
+      
+      </div>
+
+      <div>
+          <textarea className="textodia" name="" id="caixa" cols="100" rows="10" placeholder="Como foi o seu dia..." ></textarea>
+      </div>
+      
     
     </>
   );
